@@ -154,7 +154,7 @@ const totalStarsFetcher = async (username, include_orgs, repoToHide) => {
       login: username,
       first: 100,
       after: endCursor,
-      ownerAffiliations: include_orgs ? ["OWNER", "COLLABORATOR"] : ["OWNER"],
+      ownerAffiliations: include_orgs ? ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"] : ["OWNER"],
     };
     let res = await retryer(repositoriesFetcher, variables);
 
@@ -213,7 +213,7 @@ const fetchStats = async (
 
   let res = await retryer(fetcher, {
     login: username,
-    ownerAffiliations: include_orgs ? ["OWNER", "COLLABORATOR"] : ["OWNER"],
+    ownerAffiliations: include_orgs ? ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"] : ["OWNER"],
   });
 
   // Catch GraphQL errors.

@@ -64,7 +64,7 @@ const fetchTopLanguages = async (
 
   const res = await retryer(fetcher, {
     login: username,
-    ownerAffiliations: include_orgs ? ["OWNER", "COLLABORATOR"] : ["OWNER"],
+    ownerAffiliations: include_orgs ? ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"] : ["OWNER"],
   });
 
   if (res.data.errors) {
