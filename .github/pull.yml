@@ -1,6 +1,6 @@
-version: "1"
-rules:
-  - base: master
-    upstream: anuraghazra:master
-    mergeMethod: merge
-    mergeUnstable: true
+# version: "1"
+# rules:
+#   - base: master
+#     upstream: anuraghazra:master
+#     mergeMethod: merge
+#     mergeUnstable: true
